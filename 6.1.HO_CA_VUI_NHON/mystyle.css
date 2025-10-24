@@ -1,0 +1,199 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    height: 100vh;
+    background-color: #002b4c;
+    font-family: Arial, sans-serif;
+}
+
+#controls {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#controls button {
+    margin-left: 10px;
+    padding: 10px 16px;
+    background-color: #0395df;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+#controls button:hover {
+    background-color: #007acc;
+}
+
+#content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-image: url("images/ocean1.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: background-image 1s ease-in-out;
+}
+
+#content div {
+    position: absolute;
+}
+
+#content img {
+    width: 120px;         
+    height: auto;
+    display: block;
+    pointer-events: none; 
+}
+
+#shark {
+    left: 100px;
+    top: 400px;
+    animation-name: Shark;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+
+@keyframes Shark {
+    0%   {left: 100px; top: 400px;}
+    20%  {left: 300px; top: 400px;}
+    40%  {left: 500px; top: 300px;}
+    50%  {left: 700px; top: 50px;}
+    60%  {left: 700px; top: 150px;}
+    80%  {left: 400px; top: 250px;}
+    100% {left: 100px; top: 400px; transform: scaleX(-1);}
+}
+
+#turtle {
+    left: 800px;
+    top: 500px;
+    animation-name: Turtle;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+
+@keyframes Turtle {
+    0% {left: 800px; top: 500px;}
+    50% {left: 100px; top: 450px;}
+    100% {left: 800px; top: 500px; transform: scaleX(-1);}
+}
+
+#faintSchool img, 
+#goldFishSchool img {
+    width: 90px;
+}
+
+#faintSchool {
+    left: 200px;
+    top: 400px;
+    animation-name: faintSchool;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+
+@keyframes faintSchool {
+    0% {left: 800px; top: 500px;}
+    50% {left: 100px; top: 450px;}
+    100% {left: 800px; top: 500px; transform: scaleX(-1);}
+}
+
+#goldFishSchool {
+    left: 60px;
+    top: 400px;
+    animation-name: goldFishSchool;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+
+@keyframes goldFishSchool {
+    0% {left: 700px; top: 900px;}
+    50% {left: 100px; top: 250px;}
+    100% {left: 700px; top: 600px; transform: scaleX(-1);}
+}
+
+
+#diver1 {
+    left: 50px;
+    top: 100px;
+    animation-name: Diver1;
+    animation-duration: 12s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+
+@keyframes Diver1 {
+    0% {left: 50px; top: 100px;}
+    50% {left: 600px; top: 300px;}
+    100% {left: 50px; top: 100px; transform: scaleX(-1);}
+}
+
+#diver2 {
+    left: 200px;
+    top: 250px;
+    animation-name: Diver2;
+    animation-duration: 15s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+
+@keyframes Diver2 {
+    0% {left: 200px; top: 250px;}
+    50% {left: 700px; top: 200px;}
+    100% {left: 200px; top: 250px; transform: scaleX(-1);}
+}
+
+#diver3 {
+    left: 350px;
+    top: 350px;
+    animation-name: Diver3;
+    animation-duration: 17s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+
+@keyframes Diver3 {
+    0% {left: 350px; top: 350px;}
+    50% {left: 900px; top: 300px;}
+    100% {left: 350px; top: 350px; transform: scaleX(-1);}
+}
+
+.bubble {
+    position: absolute;
+    bottom: -100px;
+    width: 20px;
+    height: 20px;
+    background: rgba(255,255,255,0.5);
+    border-radius: 50%;
+    animation-name: bubble;
+    animation-duration: 6s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+
+.b1 { left: 100px; animation-delay: 0s; }
+.b2 { left: 300px; animation-delay: 2s; width: 15px; height: 15px; }
+.b3 { left: 500px; animation-delay: 1s; width: 25px; height: 25px; }
+.b4 { left: 700px; animation-delay: 3s; width: 10px; height: 10px; }
+.b5 { left: 900px; animation-delay: 4s; width: 18px; height: 18px; }
+
+@keyframes bubble {
+    0% {bottom: -100px; opacity: 0.5;}
+    50% {opacity: 0.8;}
+    100% {bottom: 100%; opacity: 0;}
+}

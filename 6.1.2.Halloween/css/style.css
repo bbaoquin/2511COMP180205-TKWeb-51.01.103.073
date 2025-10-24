@@ -1,0 +1,157 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: url("../images/background.jpg") no-repeat center center fixed; /* hình 6.4 */
+  background-size: cover;
+  margin: 0;
+  color: white;
+}
+
+header {
+  text-align: center;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+header h1 {
+  font-size: 50px;
+  color: orange;
+  animation: glow 2s infinite;
+}
+
+@keyframes glow {
+  0% { text-shadow: 0 0 10px orange, 0 0 20px red; }
+  50% { text-shadow: 0 0 25px yellow, 0 0 40px orange; }
+  100% { text-shadow: 0 0 10px orange, 0 0 20px red; }
+}
+
+
+nav {
+  background-color: rgba(255, 140, 0, 0.9);
+  text-align: center;
+  padding: 12px 0;
+}
+
+nav a {
+  color: white;
+  margin: 15px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+nav a:hover {
+  color: black;
+}
+
+section {
+  width: 80%;
+  margin: 30px auto;
+  background: rgba(0, 0, 0, 0.65);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px orange;
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 30px;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.product {
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid orange;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(255, 140, 0, 0.5);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px orange;
+}
+
+.product img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+
+.product h3 {
+  text-align: center;
+  color: orange;
+  margin: 10px 0;
+}
+
+.product-details {
+  padding: 10px 20px;
+  color: #ffe4b5;
+  font-size: 15px;
+  text-align: justify;
+  border-top: 1px solid orange;
+}
+
+h2 {
+  color: orange;
+  border-bottom: 2px solid orange;
+  padding-bottom: 8px;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background: rgba(255, 140, 0, 0.9);
+  margin-top: 30px;
+}
+
+.pumpkin {
+  position: absolute;
+  width: 60px;
+  animation: float 6s ease-in-out infinite;
+  z-index: 5;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+input, textarea, button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+button {
+  background-color: orange;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: black;
+}
+
+.gallery img {
+  width: 110px;
+  margin: 10px;
+  border-radius: 10px;
+  border: 2px solid orange;
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.2);
+}

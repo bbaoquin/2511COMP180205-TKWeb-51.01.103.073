@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hồ cá vui nhộn</title>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+    <div id="content">
+        <div id="shark"><img src="images/shark.png" alt="shark"></div>
+        <div id="turtle"><img src="images/turtle.png" alt="turtle"></div>
+        <div id="diver1"><img src="images/diver1.png" alt="diver1"></div>
+        <div id="diver2"><img src="images/diver2.png" alt="diver2"></div>
+        <div id="diver3"><img src="images/diver3.png" alt="diver3"></div>
+        <div id="faintSchool"><img src="images/faintSchool.png" alt="faintSchool"></div>
+        <div id="goldFishSchool"><img src="images/goldFishSchool.png" alt="goldFishSchool"></div>
+        <div class="bubble b1"></div>
+        <div class="bubble b2"></div>
+        <div class="bubble b3"></div>
+        <div class="bubble b4"></div>
+        <div class="bubble b5"></div>
+    </div>
+    <div id="controls">
+        <button id="change-bg">🌅 Đổi nền</button>
+        <button id="toggle-music">🎵 Bật nhạc</button>
+    </div>
+    <audio id="bg-music" loop>
+        <source src="audio/ocean.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        const backgrounds = [
+            "images/ocean1.jpeg",
+            "images/ocean2.jpg",
+            "images/ocean3.jpg",
+            "images/ocean4.webp"
+        ];
+        let bgIndex = 0;
+        const content = document.getElementById("content");
+        document.getElementById("change-bg").onclick = () => {
+            bgIndex = (bgIndex + 1) % backgrounds.length;
+            content.style.backgroundImage = `url(${backgrounds[bgIndex]})`;
+        };
+
+        const music = document.getElementById("bg-music");
+        const btnMusic = document.getElementById("toggle-music");
+        let playing = false;
+        btnMusic.onclick = () => {
+            if (playing) {
+                music.pause();
+                btnMusic.textContent = "🎵 Bật nhạc";
+            } else {
+                music.play();
+                btnMusic.textContent = "⏸ Dừng nhạc";
+            }
+            playing = !playing;
+        };
+    </script>
+
+</body>
+</html>
